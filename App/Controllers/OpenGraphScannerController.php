@@ -38,7 +38,7 @@ class OpenGraphScannerController extends Controller
 
 			return $response->withJson([
 				'success' => true,
-				'date' => [
+				'data' => [
 					'parsed' => $document->toArray(),
 					'meta' => $document->getMetas()
 				]
