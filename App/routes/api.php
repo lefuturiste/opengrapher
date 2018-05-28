@@ -9,6 +9,6 @@
 */
 
 $app->group('', function () {
-  $app->get('/', [\App\Controllers\PagesController::class, 'getHome']);
-  $app->get('/scan', [\App\Controllers\OpenGraphScannerController::class, 'getScan']);
+  $this->get('/', [\App\Controllers\PagesController::class, 'getHome']);
+  $this->get('/scan', [\App\Controllers\OpenGraphScannerController::class, 'getScan']);
 })->add(new \App\Middlewares\CorsMiddleware());
