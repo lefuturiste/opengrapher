@@ -25,6 +25,11 @@ class Document
 	private $description = "";
 
 	/**
+	 * @var string
+	 */
+	private $author = "";
+
+	/**
 	 * @var array
 	 */
 	private $keywords = [];
@@ -125,11 +130,15 @@ class Document
 		return $this->filterMetas($this->metas, "description", "name");
 	}
 
+	private function parseAuthor()
+	{
+		return $this->filterMetas($this->metas, "author", "name");
+	}
+
 	private function parseGenerator()
 	{
 		return $this->filterMetas($this->metas, "generator", "name");
 	}
-
 
 	private function parseKeywords()
 	{
@@ -194,6 +203,7 @@ class Document
 	{
 		$this->metas = $this->parseMetas();
 		$this->title = $this->parseTitle();
+		$this->author = $this->parseAuthor();
 		$this->generator = $this->parseGenerator();
 		$this->description = $this->parseDescription();
 		$this->keywords = $this->parseKeywords();
@@ -204,6 +214,7 @@ class Document
 	{
 		return [
 			'title' => $this->title,
+			'author' => $this->author,
 			'description' => $this->description,
 			'generator' => $this->generator,
 			'keywords' => $this->keywords,

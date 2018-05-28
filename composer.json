@@ -1,6 +1,6 @@
 {
-    "name": "lefuturiste/slim3-template-api",
-    "description": "Slim3 template, ready to start. This is Api version of slim3 template with more lightly template.",
+    "name": "lefuturiste/opengrapher",
+    "description": "Opengrapher is the simplest way to get informations about a web page using opengraph protocol. By this repository you can make your own instance.",
     "type": "project",
     "authors": [
         {
